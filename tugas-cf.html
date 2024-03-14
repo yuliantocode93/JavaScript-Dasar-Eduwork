@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+</head>
+
+<body>
+    <h1>
+        This is a static template, there is no bundler or bundling involved!
+    </h1>
+    <script>
+        let nilai;
+
+        do {
+            nilai = prompt('Masukkan nilai:');
+            if (nilai === null) {
+                break; // Keluar dari loop jika pengguna membatalkan prompt
+            }
+
+            // Memeriksa apakah nilai adalah angka
+            if (!isNaN(nilai)) {
+                // Konversi nilai ke angka jika diperlukan
+                nilai = Number(nilai);
+
+                switch (true) {
+                    case nilai >= 90:
+                        alert('Nilai A');
+                        break;
+                    case nilai >= 80:
+                        alert('Nilai B');
+                        break;
+                    case nilai >= 70:
+                        alert('Nilai C');
+                        break;
+                    case nilai >= 60:
+                        alert('Nilai D');
+                        break;
+                    default:
+                        alert('Tidak Lulus');
+                        break;
+                }
+            } else {
+                alert('Masukkan harus berupa angka.');
+            }
+        } while (confirm("Apakah Anda ingin mengisi nilai lagi?"));
+    </script>
+</body>
+
+</html>
