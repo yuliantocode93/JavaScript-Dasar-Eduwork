@@ -18,14 +18,14 @@ let person1 = {
   age: 20,
   hobbies: ["coding", "reading"],
   sayhello: function () {
-    console.log(`hello ${this.name}`);
-    console.log(this);
+    console.log(`hello ${this.name}`); // this
+    console.log(this); // this
   },
 };
 
-person1.sayhello();
+person1.sayhello(); // hello eko, your age is 20 and you are single and your hobbies are ['coding', 'reading'] and your person is { name: 'eko', age: 20 }
 
-console.log(22 + "oke");
+console.log(22 + "oke"); // 22oke
 
 //* Operator Arithmatika
 let angka = 10;
@@ -43,7 +43,7 @@ let nilai2 = 60;
 let lulus1 = nilai1 > 70 ? "lulus" : "tidak lulus";
 let lulus2 = nilai2 >= 70 ? "lulus" : "tidak lulus";
 
-console.log(lulus2);
+console.log(lulus2); // tidak lulus
 
 //* Operator Logika
 
