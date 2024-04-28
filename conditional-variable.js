@@ -30,8 +30,11 @@ const umur = 30;
 const keterangan = umur < 18 ? "anak" : umur < 60 ? "dewasa" : "tua";
 console.log(keterangan); //* dewasa
 
+const keterangan2 = umur < 18 ? "anak" : umur > 60 ? "dewasa" : "lansia";
+console.log(keterangan2); //* lansia
+
 const kondisiAnd = umur < 50 && "dewasa";
-console.log(kondisiAnd); //* true
+console.log(kondisiAnd); //* false
 
 const kondisiOr = umur < 50 || "dewasa";
 console.log(kondisiOr); //* true
@@ -95,14 +98,14 @@ const listHarga = listBuku.map((buku) => buku.harga);
 console.log(listHarga); //* [250000, 300000, 200000]
 
 const listPengarang = listBuku.map((buku) => buku.pengarang);
-console.log(listPengarang); //* [{...}, {...}, {...}]
+console.log(listPengarang);
 
 const listHalaman = listBuku.map((buku) => buku.halaman);
 console.log(listHalaman); //* [1000, 2000, 800]
 
 //* Filter
 const bukuMahal = listBuku.filter((buku) => buku.harga > 200000);
-console.log(bukuMahal); //* [{...}, {...}]
+console.log(bukuMahal);
 
 const bukuHalaman = listBuku.filter((buku) => buku.halaman > 1000);
-console.log(bukuHalaman); //* [{...}, {...}]
+console.log(bukuHalaman);

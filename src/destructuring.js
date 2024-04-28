@@ -7,11 +7,11 @@ const buah2 = listBuah[1];
 const buah3 = listBuah[2];
 console.log(buah1, buah2, buah3);
 
-// Destructur
+//* Destructuring
 const [pertama, kedua, ketiga, ...lainnya] = listBuah;
 console.log(pertama, kedua, ketiga, lainnya); //* ['jeruk', 'salak', 'mangga', 'anggur', 'durian']
 
-// contoh destructur object
+//* contoh destructuring object
 const buku = {
   judul: "Harry potter",
   harga: 250000,
@@ -26,16 +26,16 @@ const buku = {
 const judulBuku = buku.judul;
 const hargaBuku = buku.harga;
 const namaPengarang = buku.pengarang.nama;
-console.log(judulBuku, hargaBuku, namaPengarang); //* Harry potter 250000 J. K. Rowling
+console.log(`judul: ${judulBuku}, harga: ${hargaBuku}, pengarang: ${namaPengarang}`); //* judul: Harry potter, harga: 250000, pengarang: J. K. Rowling
 
-// destructur
+//* Destructuring object dan alias
 const {
   judul,
   harga,
-  pengarang: { nama },
+  pengarang: { nama }, //* pengarang: {nama: namaPengarang},
   ...dataLainnya
 } = buku;
-console.log(judul, harga, nama, dataLainnya); //* Harry potter 250000 J. K. Rowling {}
+console.log(judul, harga, nama, ...dataLainnya); //* Harry potter 250000 J. K. Rowling {halaman: 1000, bab: 200}
 
 // contoh destructur di function parameter
 function penjumlahan([angka1, angka2]) {
@@ -44,15 +44,15 @@ function penjumlahan([angka1, angka2]) {
   console.log(pesan); //* 15
 }
 
-function printBuku({ judul, harga, pengarang: { nama } }) {
-  const pesan = `Buku ${judul} karya ${nama} dijual dengan harga ${harga}`;
-  console.log(pesan); //* Buku Harry potter karya J. K. Rowling dijual dengan harga 250000
+function printBuku({ judul, halaman, harga, pengarang: { nama } }) {
+  const pesan = `Buku ${judul} karya ${nama} dijual dengan harga ${harga}, dengan total halaman ${halaman}`;
+  console.log(pesan); //* Buku Harry potter karya J. K. Rowling dijual dengan harga 250000, dengan total halaman 1000
 }
 
-printBuku(buku); //* Buku Harry potter karya J. K. Rowling dijual dengan harga 250000
 penjumlahan([10, 5]); //* 15
+printBuku(buku); //* Buku Harry potter karya J. K. Rowling dijual dengan harga 250000
 
-//todo: contoh destructuring function
+//* contoh destructuring function
 //* List of students
 const students = [
   { name: "John", age: 20, grade: "A" },
@@ -62,11 +62,11 @@ const students = [
 
 // Destructuring array dan object
 const [, { name: secondStudentName, age: secondStudentAge }] = students;
-console.log(`Name: ${secondStudentName}, Age: ${secondStudentAge}`); // Output: Name: Jane, Age: 21
+console.log(`Name: ${secondStudentName}, Age: ${secondStudentAge}`); //* Output: Name: Jane, Age: 21
 
 // Default value dan alias
 const [, , { name: thirdStudentName = "Unknown", grade: thirdStudentGrade = "Not Available" }] = students;
-console.log(`Name: ${thirdStudentName}, Grade: ${thirdStudentGrade}`); // Output: Name: Doe, Grade: A
+console.log(`Name: ${thirdStudentName}, Grade: ${thirdStudentGrade}`); //* Output: Name: Doe, Grade: A
 
 //* List of products
 const products = [
@@ -77,11 +77,11 @@ const products = [
 
 // Destructuring array dan object
 const [, { name: secondProductName, price: secondProductPrice }] = products;
-console.log(`Product: ${secondProductName}, Price: $${secondProductPrice}`); // Output: Product: Laptop, Price: $1200
+console.log(`Product: ${secondProductName}, Price: $${secondProductPrice}`); //* Output: Product: Laptop, Price: $1200
 
 // Default value dan alias
 const [, , { name: thirdProductName = "Unknown", stock: thirdProductStock = 0 }] = products;
-console.log(`Product: ${thirdProductName}, Stock: ${thirdProductStock}`); // Output: Product: Headphones, Stock: 0
+console.log(`Product: ${thirdProductName}, Stock: ${thirdProductStock}`); //* Output: Product: Headphones, Stock: 0
 
 //* contoh destructuring function
 const users = [
@@ -105,7 +105,7 @@ const users = [
   },
 ];
 
-// Destructuring array, object, dan alias
+//* Destructuring array, object, dan alias
 const [
   ,
   {
@@ -116,13 +116,13 @@ const [
 ] = users;
 console.log(`Second User: ${secondUserName}, Age: ${secondUserAge}, Hobbies: ${hobby1}, ${hobby2}`);
 
-// Default value
+//* Default value
 const [, , { name: thirdUserName = "Unknown", age: thirdUserAge = 0, hobbies: thirdUserHobbies = [] }] = users;
 console.log(`Third User: ${thirdUserName}, Age: ${thirdUserAge}, Hobbies: ${thirdUserHobbies.join(", ")}`);
 
-// Destructuring di dalam parameter fungsi
+//* Destructuring di dalam parameter fungsi
 function printUserInfo({ name, age, hobbies }) {
   console.log(`Name: ${name}, Age: ${age}, Hobbies: ${hobbies.join(", ")}`);
 }
 
-printUserInfo(users[0]); // Output: Name: John Doe, Age: 30, Hobbies: Reading, Cooking
+printUserInfo(users[0]); //* Output: Name: John Doe, Age: 30, Hobbies: Reading, Cooking

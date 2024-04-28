@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh JavaScript DOM</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript DOM</h1>
+
+    <div id="container">
+        <p id="demo">Ini adalah sebuah paragraf.</p>
+    </div>
+
+    <button onclick="ubahText()">Ubah Teks</button>
+    <button onclick="tambahElemen()">Tambah Elemen</button>
+    <button onclick="hapusElemen()">Hapus Elemen</button>
+
+    <script>
+        // Fungsi untuk mengubah teks elemen
+        function ubahText() {
+            var elemen = document.getElementById("demo");
+            elemen.innerHTML = "Teks telah diubah!";
+            elemen.style.color = "red"; // Mengubah warna teks menjadi merah
+        }
+
+        // Fungsi untuk menambah elemen baru
+        function tambahElemen() {
+            var container = document.getElementById("container");
+            var newElement = document.createElement("p");
+            var textNode = document.createTextNode("Ini adalah elemen baru.");
+            newElement.appendChild(textNode);
+            container.appendChild(newElement);
+        }
+
+        // Fungsi untuk menghapus elemen
+        function hapusElemen() {
+            var container = document.getElementById("container");
+            var child = container.lastElementChild;
+            container.removeChild(child);
+        }
+
+        // Menanggapi event mouseover
+        var demo = document.getElementById("demo");
+        demo.addEventListener("mouseover", function () {
+            demo.classList.add("highlight");
+        });
+
+        // Menanggapi event mouseout
+        demo.addEventListener("mouseout", function () {
+            demo.classList.remove("highlight");
+        });
+    </script>
+
+</body>
+
+</html>
