@@ -70,7 +70,18 @@ let kk7 = keluarga.reduce(function (total, kk) {
   return total + kk.age;
 }, 0); //* 63
 
-console.log(kk, kk2, kk3, kk4, kk5, kk6, kk7); //* [ { name: 'eko', age: 20 }, { name: 'budi', age: 21 }, { name: 'wati', age: 22 } ]
+let kk88 = keluarga.reduce(function (total, kk) {
+  return total + kk.age;
+}); //* 63
+
+console.log(`kk1: ${kk}`);
+console.log(`kk2: ${kk2}`);
+console.log(`kk3: ${kk3}`);
+console.log(`kk4: ${kk4}`);
+console.log(`kk5: ${kk5}`);
+console.log(`kk6: ${kk6}`);
+console.log(`kk7: ${kk7}`);
+console.log(`kk88: ${kk88}`);
 
 let kk8 = keluarga.map(function (kk) {
   return {
@@ -117,4 +128,4 @@ let kkBaru = keluarga
   .filter((kk) => kk.status == "kerja")
   .reduce((prev, curr) => prev + curr.pendapatan, 0);
 
-console.log(kkBaru); //* 5000000
+console.log(`kkBaru : ${kkBaru}`); // * 15000000

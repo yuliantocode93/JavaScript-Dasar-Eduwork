@@ -29,12 +29,20 @@ console.log(22 + "oke"); // 22oke
 
 //* Operator Arithmatika
 let angka = 10;
-console.log(angka ** 2);
-console.log(angka % 4); // sisa bagi
+console.log(angka ** 2); // kuadrat = 100
+console.log(angka % 4); // sisa bagi = 2
 console.log(angka / 4); // pembagian
 console.log(angka); // 10
 console.log(++angka); // 11
 console.log(--angka); // 10
+
+//* Operator Perbandingan
+
+let angka1 = 10;
+let angka2 = 20;
+
+console.log(angka1 < angka2); // true
+console.log(angka1 > angka2); // false
 
 //* Ternary Operator
 let nilai1 = 90;
@@ -54,6 +62,23 @@ console.log(x < y && x > y); // and
 console.log(x < y || x > y); // or
 console.log(x < y || x < y); // or
 console.log(!(x < y || x < y)); // not
+
+//* Operator Spesial
+
+console.log(!!(x < y || x < y)); // true
+console.log(!!(x < y && x > y)); // false
+console.log(!!(x < y && x < y)); // false
+console.log(!!(x < y || x < y)); // true
+
+//* Operator Logika
+
+let a = 10;
+let b = 20;
+
+console.log(a > b ? "a > b" : a < b ? "a < b" : "a = b"); // a < b
+console.log(a === b ? "a = b" : a < b ? "a < b" : "a > b"); // a < b
+console.log(a === b ? "a = b" : a > b ? "a > b" : "a < b"); // a < b
+console.log(a < b ? "a < b" : a === b ? "a = b" : "a > b"); // a < b
 
 //* Type Of
 

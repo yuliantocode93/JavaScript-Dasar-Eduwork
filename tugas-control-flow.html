@@ -13,19 +13,23 @@
         This is a static template, there is no bundler or bundling involved!
     </h1>
     <script>
-        let nilai;
+        let nilai; // Variabel untuk menyimpan nilai yang dimasukkan oleh pengguna
 
+        // Loop akan terus berjalan selama pengguna ingin mengisi nilai lagi
         do {
-            nilai = prompt('Masukkan nilai:');
+            nilai = prompt('Masukkan nilai!:'); // Meminta pengguna untuk memasukkan nilai
+
+            // Memeriksa jika pengguna membatalkan prompt
             if (nilai === null) {
                 break; // Keluar dari loop jika pengguna membatalkan prompt
             }
 
-            // Memeriksa apakah nilai adalah angka
+            // Memeriksa apakah nilai yang dimasukkan adalah angka
             if (!isNaN(nilai)) {
-                // Konversi nilai ke angka jika diperlukan
+                // Konversi nilai ke tipe data angka jika diperlukan
                 nilai = Number(nilai);
 
+                // Menggunakan switch case untuk menentukan grade berdasarkan nilai
                 switch (true) {
                     case nilai >= 90:
                         alert('Nilai A');
@@ -44,9 +48,11 @@
                         break;
                 }
             } else {
+                // Menampilkan pesan jika nilai yang dimasukkan bukan angka
                 alert('Masukkan harus berupa angka.');
             }
-        } while (confirm("Apakah Anda ingin mengisi nilai lagi?"));
+        } while (confirm("Apakah Anda ingin mengisi nilai lagi?")); // Konfirmasi apakah pengguna ingin mengisi nilai lagi
+
     </script>
 </body>
 
