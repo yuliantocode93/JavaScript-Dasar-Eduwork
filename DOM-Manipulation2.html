@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Node</title>
+    <style>
+        * {
+            border: 2px solid #dedede;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            max-width: 600px;
+            margin: 30px auto;
+            font-family: sans-serif;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="judul">Hello World</h1>
+    <div id="container">
+        <section id="a">
+            <p class="p1">paragraf 1</p>
+            <a href="https://www.instagram.com/1004yul_i/">Instagram Julian kim</a>
+            <p class="p2">paragraf 2</p>
+            <p class="p3">paragraf 3</p>
+        </section>
+        <section id="b">
+            <p>paragraf 4</p>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // DOM Manipulation
+        // buat elemen baru
+        // const judul = document.getElementById('judul');
+        // judul.style.color = 'red';
+        // judul.style.backgroundColor = 'black';
+
+        // const judul = document.getElementsByTagName('h1')[0];
+        // judul.innerHTML = 'Ganti Judul';
+        // const a = document.getElementsByTagName('a')[0];
+        // a.setAttribute('href', 'http://instagram.com/juliankim');
+        const a = document.querySelector('section#a a');
+        a.setAttribute('href', 'https://www.instagram.com/1004yul_i/');
+
+
+        const pBaru = document.createElement('p');
+        const tekspBaru = document.createTextNode('paragraf baru');
+        // simpan tulisan ke dalam paragraf
+        pBaru.appendChild(tekspBaru);
+        // simpan pBaru di akhir Section A
+        const sectionA = document.getElementById('a');
+        sectionA.appendChild(pBaru);
+
+
+        const liBaru = document.createElement('li');
+        const teksLiBaru = document.createTextNode('Item Baru');
+        liBaru.appendChild(teksLiBaru);
+
+        const ul = document.querySelector('section#b ul');
+        const li2 = ul.querySelector('li:nth-child(2)');
+
+        ul.insertBefore(liBaru, li2);
+
+
+
+        // const link = document.getElementsByTagName('a')[0];
+        // sectionA.removeChild(link);
+
+
+
+        const sectionB = document.getElementById('b');
+        const p4 = sectionB.querySelector('p');
+
+        const H2Baru = document.createElement('h2');
+        const teksH2Baru = document.createTextNode('judul baru !');
+
+        H2Baru.appendChild(teksH2Baru);
+
+        sectionB.replaceChild(H2Baru, p4);
+
+        pBaru.style.backgroundColor = 'lightgreen';
+        liBaru.style.backgroundColor = 'lightblue';
+        H2Baru.style.backgroundColor = 'lightpink';
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

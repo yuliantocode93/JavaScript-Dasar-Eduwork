@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM COLOR</title>
+    <style>
+        
+        html, body {
+            height: 100%;
+        }
+        body {
+            text-align: center;
+        }
+        .biru-muda { background-color: aquamarine;}
+
+        .kotak {
+            width: 25px;
+            height: 25px;
+            margin: 10px auto;
+        }
+        .merah { background-color: red;}
+        .hijau { background-color: green;}
+        .biru { background-color: blue;}
+        .biru-muda {background-color: lightblue;}
+    </style>
+
+
+
+</head>
+<body>
+<h1>PLAYING WITH COLOR</h1>
+<button type="button" id="tUbahWarna">CHANGE COLOR</button>
+
+<br><br>
+<div class="kotak merah"></div>
+<label for="points">red</label>
+<input type="range" id="points" name="sMerah" min="1" max="255">
+
+<div class="kotak hijau"></div>
+<label for="point">green</label>
+<input type="range" id="point" name="sHijau" min="1" max="255">
+
+<div class="kotak biru"></div>
+<label for="poin">blue</label>
+<input type="range" id="poin" name="sBiru" min="1" max="255">
+
+
+
+<script src="DOM-Color.js"></script>
+</body>
+</html>
