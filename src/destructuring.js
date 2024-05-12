@@ -35,9 +35,9 @@ const {
   pengarang: { nama }, //* pengarang: {nama: namaPengarang},
   ...dataLainnya
 } = buku;
-console.log(judul, harga, nama, ...dataLainnya); //* Harry potter 250000 J. K. Rowling {halaman: 1000, bab: 200}
+console.log(`Buku ${judul} karya ${nama} dijual dengan harga ${harga}, ${dataLainnya}`); //* Buku Harry potter karya J. K. Rowling dijual dengan harga 250000, dengan total halaman 1000
 
-// contoh destructur di function parameter
+//* contoh destructur di function parameter
 function penjumlahan([angka1, angka2]) {
   const penjumlahan = angka1 + angka2;
   const pesan = `hasil penjulahan kedua bilangan adalah ${penjumlahan}`;
@@ -83,7 +83,7 @@ console.log(`Product: ${secondProductName}, Price: $${secondProductPrice}`); //*
 const [, , { name: thirdProductName = "Unknown", stock: thirdProductStock = 0 }] = products;
 console.log(`Product: ${thirdProductName}, Stock: ${thirdProductStock}`); //* Output: Product: Headphones, Stock: 0
 
-//* contoh destructuring function
+//* List of users
 const users = [
   {
     id: 1,

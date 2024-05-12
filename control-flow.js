@@ -1,19 +1,51 @@
-//* Control Flow
-// let nilai = 60;
-// let gender = "pria";
+// * Control Flow
 
-// if (nilai > 80) {
-//   console.log("Nilai anda A");
-// } else if (nilai > 70) {
-//   console.log("Nilai anda B");
-// } else if (nilai > 60) {
-//   console.log("Nilai anda C");
-// } else if (nilai > 50) {
-//   console.log("Nilai anda D");
-// } else {
-//   console.log("Nilai anda E");
-// }
+// Contoh 0: If-else
 
+let nilai = 60;
+let gender = "pria";
+
+if (nilai > 80) {
+  console.log("Nilai anda A");
+} else if (nilai > 70) {
+  console.log("Nilai anda B");
+} else if (nilai > 60) {
+  console.log("Nilai anda C");
+} else if (nilai > 50) {
+  console.log("Nilai anda D");
+} else {
+  console.log("Nilai anda E");
+}
+
+// Contoh 1: Loop dari 1 hingga 5
+for (let i = 1; i <= 5; i++) {
+  console.log(i); // 1, 2, 3, 4, 5
+}
+
+// Contoh 2: Loop melalui elemen-elemen dalam sebuah array
+const fruits = ["apel", "pisang", "jeruk", "anggur"];
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]); // apel, pisang, jeruk, anggur
+}
+
+// Contoh 3: Loop melalui properti-properti dalam sebuah objek
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+
+for (let key in person) {
+  console.log(`${key}: ${person[key]}`); // name: John, age: 30, city: New York
+}
+
+// Contoh 4: Loop melalui properti-properti dalam sebuah array
+const numbers = [1, 2, 3, 4, 5];
+for (let num of numbers) {
+  console.log(num); // 1, 2, 3, 4, 5
+}
+
+// Contoh 5: Loop melalui elemen-elemen dalam sebuah array
 let buah = document.querySelectorAll(".buah");
 for (let e of buah) {
   e.addEventListener("click", function () {

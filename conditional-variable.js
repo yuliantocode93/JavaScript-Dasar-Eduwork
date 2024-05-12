@@ -30,17 +30,20 @@ const umur = 30;
 const keterangan = umur < 18 ? "anak" : umur < 60 ? "dewasa" : "tua";
 console.log(keterangan); //* dewasa
 
+const keterangan1 = umur < 50 ? "sudah tua" : "masih muda";
+console.log(keterangan1); //* masih muda
+
 const keterangan2 = umur < 18 ? "anak" : umur > 60 ? "dewasa" : "lansia";
 console.log(keterangan2); //* lansia
 
 const kondisiAnd = umur < 50 && "dewasa";
-console.log(kondisiAnd); //* false
+console.log(kondisiAnd); //* false atau dewasa
 
 const kondisiOr = umur < 50 || "dewasa";
 console.log(kondisiOr); //* true
 
 const kondisiAnd2 = umur > 50 && "dewasa";
-console.log(kondisiAnd); //* false
+console.log(kondisiAnd); //* false atau dewasa
 
 const kondisiOr2 = umur > 50 || "dewasa";
 console.log(kondisiOr); //* true
@@ -105,7 +108,10 @@ console.log(listHalaman); //* [1000, 2000, 800]
 
 //* Filter
 const bukuMahal = listBuku.filter((buku) => buku.harga > 200000);
-console.log(bukuMahal);
+console.log(bukuMahal); //* [ { judul: 'Lord of the rings', harga: 300000, halaman: 2000, bab: 300, pengarang: { nama: 'J. R. R. Tolkien', negara: 'inggris' } } ]
 
 const bukuHalaman = listBuku.filter((buku) => buku.halaman > 1000);
-console.log(bukuHalaman);
+console.log(bukuHalaman); //* [ { judul: 'Harry potter', harga: 250000, halaman: 1000, bab: 200, pengarang: { nama: 'J. K. Rowling', negara: 'inggris' } } ]
+
+const bukuPengarang = listBuku.filter((buku) => buku.pengarang.nama === "J. K. Rowling");
+console.log(bukuPengarang); //* [ { judul: 'Harry potter', harga: 250000, halaman: 1000, bab: 200, pengarang: { nama: 'J. K. Rowling', negara: 'inggris' } } ]

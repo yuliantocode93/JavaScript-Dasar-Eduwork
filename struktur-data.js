@@ -7,7 +7,7 @@ let age = 20; //number
 let high = 170.5; // floating
 let isMarried = false; //boolean
 let hobbies = ["coding", "reading"]; //array
-let person = { name: "Rizki", age: 20 }; //object
+let person = { name: "Rizki", age: 20 }; //objects
 
 names = "eko";
 console.log(`hello ${names}, your age is ${age} and you are ${isMarried ? "married" : "single"} and your hobbies are ${hobbies} and your person is ${person}`);
@@ -31,7 +31,7 @@ console.log(22 + "oke"); // 22oke
 let angka = 10;
 console.log(angka ** 2); // kuadrat = 100
 console.log(angka % 4); // sisa bagi = 2
-console.log(angka / 4); // pembagian
+console.log(angka / 4); // pembagian = 2.5
 console.log(angka); // 10
 console.log(++angka); // 11
 console.log(--angka); // 10
