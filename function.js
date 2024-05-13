@@ -22,6 +22,7 @@ const panah = () => {
 // 4. function constructor
 const konstruktor = new Function('console.log("constructor")'); // tidak disarankan karena tidak menggunakan this
 
+// 5. this keyword
 const btn = document.getElementById("btn");
 btn.addEventListener("click", () => {
   console.log(this); // window object bawaan browser
