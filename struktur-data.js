@@ -30,7 +30,7 @@ console.log(22 + "oke"); // 22oke
 //* Operator Arithmatika
 let angka = 10;
 console.log(angka ** 2); // kuadrat = 100
-console.log(angka % 4); // sisa bagi = 2
+console.log(angka % 4); // modulus sisa bagi = 2
 console.log(angka / 4); // pembagian = 2.5
 console.log(angka); // 10
 console.log(++angka); // 11
@@ -40,7 +40,11 @@ console.log(--angka); // 10
 
 let angka1 = 10;
 let angka2 = 20;
-
+let angka3 = 2;
+angka3 = angka3 + angka1;
+console.log(`angka3 = ${angka3}`); // angka3 = 12
+angka3 += angka1;
+console.log(`angka3 ke2 = ${angka3}`); // angka3 ke2 = 22
 console.log(angka1 < angka2); // true
 console.log(angka1 > angka2); // false
 

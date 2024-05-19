@@ -1,6 +1,6 @@
 // * Control Flow
 
-// Contoh 0: If-else
+//* Contoh 0: If-else
 
 let nilai = 60;
 let gender = "pria";
@@ -17,12 +17,12 @@ if (nilai > 80) {
   console.log("Nilai anda E");
 }
 
-// Contoh 1: Loop dari 1 hingga 5
+//* Contoh 1: Loop dari 1 hingga 5
 for (let i = 1; i <= 5; i++) {
   console.log(i); // 1, 2, 3, 4, 5
 }
 
-// Contoh 2: Loop melalui elemen-elemen dalam sebuah array
+//* Contoh 2: Loop melalui elemen-elemen dalam sebuah array
 const fruits = ["apel", "pisang", "jeruk", "anggur"];
 for (let i = 0; i < fruits.length; i++) {
   console.log(fruits[i]); // apel, pisang, jeruk, anggur
