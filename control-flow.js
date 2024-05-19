@@ -74,7 +74,7 @@ let keluarga = [
   },
 ];
 
-let kk = keluarga.map(function (kk) {
+let kk1 = keluarga.map(function (kk) {
   return kk;
 }); //* [ { name: 'eko', age: 20 }, { name: 'budi', age: 21 }, { name: 'wati', age: 22 } ]
 
@@ -102,18 +102,14 @@ let kk7 = keluarga.reduce(function (total, kk) {
   return total + kk.age;
 }, 0); //* 63
 
-let kk88 = keluarga.reduce(function (total, kk) {
-  return total + kk.age;
-}); //* 63
-
-console.log(`kk1: ${kk}`);
-console.log(`kk2: ${kk2}`);
-console.log(`kk3: ${kk3}`);
-console.log(`kk4: ${kk4}`);
-console.log(`kk5: ${kk5}`);
-console.log(`kk6: ${kk6}`);
-console.log(`kk7: ${kk7}`);
-console.log(`kk88: ${kk88}`);
+console.log("kk1 sampai kk7 = ");
+console.log(kk1);
+console.log(kk2);
+console.log(kk3);
+console.log(kk4);
+console.log(kk5);
+console.log(kk6);
+console.log(kk7);
 
 let kk8 = keluarga.map(function (kk) {
   return {
@@ -122,6 +118,7 @@ let kk8 = keluarga.map(function (kk) {
     age: kk.age,
   };
 });
+console.log("kk8 = ");
 console.log(kk8); //* [ { name: 'eko', pendapatan: 5000000, age: 20 }, { name: 'budi', pendapatan: 3000000, age: 21 }, { name: 'wati', pendapatan: 2000000, age: 22 } ]
 
 let kk9 = keluarga.map(function (kk) {
@@ -129,6 +126,7 @@ let kk9 = keluarga.map(function (kk) {
     return kk;
   }
 });
+console.log("kk9 = ");
 console.log(kk9); //* [ { name: 'budi', age: 21 }, { name: 'wati', age: 22 } ]
 
 let kk10 = keluarga.filter(function (kk) {
@@ -136,6 +134,7 @@ let kk10 = keluarga.filter(function (kk) {
     return kk;
   }
 });
+console.log("kk10 = ");
 console.log(kk10); //* [ { name: 'eko', age: 20 } ]
 
 let kk11 = keluarga.find(function (kk) {
@@ -143,6 +142,7 @@ let kk11 = keluarga.find(function (kk) {
     return kk;
   }
 });
+console.log("kk11 = ");
 console.log(kk11); // * { name: 'budi', age: 21 }
 
 let kk12 = kk10.reduce(function (prev, curr) {
