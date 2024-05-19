@@ -52,7 +52,7 @@ function printBuku({ judul, halaman, harga, pengarang: { nama } }) {
 penjumlahan([10, 5]); //* 15
 printBuku(buku); //* Buku Harry potter karya J. K. Rowling dijual dengan harga 250000
 
-//* contoh destructuring function
+//* contoh destructuring di dalam array
 //* List of students
 const students = [
   { name: "John", age: 20, grade: "A" },

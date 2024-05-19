@@ -31,7 +31,7 @@ const keterangan = umur < 18 ? "anak" : umur < 60 ? "dewasa" : "tua";
 console.log(keterangan); //* dewasa
 
 const keterangan1 = umur < 50 ? "sudah tua" : "masih muda";
-console.log(keterangan1); //* masih muda
+console.log(keterangan1); //* sudah tua
 
 const keterangan2 = umur < 18 ? "anak" : umur > 60 ? "dewasa" : "lansia";
 console.log(keterangan2); //* lansia
@@ -41,9 +41,6 @@ console.log(kondisiAnd); //* false atau dewasa
 
 const kondisiOr = umur < 50 || "dewasa";
 console.log(kondisiOr); //* true
-
-const kondisiAnd2 = umur > 50 && "dewasa";
-console.log(kondisiAnd); //* false atau dewasa
 
 const kondisiOr2 = umur > 50 || "dewasa";
 console.log(kondisiOr); //* true
