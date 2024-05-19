@@ -31,17 +31,20 @@
 
                 // Menggunakan switch case untuk menentukan grade berdasarkan nilai
                 switch (true) {
-                    case nilai >= 90:
+                    case nilai >= 90 && nilai <= 100:
                         alert('Nilai A');
                         break;
-                    case nilai >= 80:
+                    case nilai >= 80 && nilai <= 100:
                         alert('Nilai B');
                         break;
-                    case nilai >= 70:
+                    case nilai >= 70 && nilai <= 100:
                         alert('Nilai C');
                         break;
-                    case nilai >= 60:
+                    case nilai >= 60 && nilai <= 100:
                         alert('Nilai D');
+                        break;
+                    case nilai > 100:
+                        alert('Tidak boleh lebih dari 100!');
                         break;
                     default:
                         alert('Tidak Lulus');

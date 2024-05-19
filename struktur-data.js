@@ -55,7 +55,8 @@ let nilai2 = 60;
 let lulus1 = nilai1 > 70 ? "lulus" : "tidak lulus";
 let lulus2 = nilai2 >= 70 ? "lulus" : "tidak lulus";
 
-console.log(lulus2); // tidak lulus
+console.log(`lulus1 = ${lulus1}`); // lulus
+console.log(`lulus2 = ${lulus2}`); // tidak lulus
 
 //* Operator Logika
 
