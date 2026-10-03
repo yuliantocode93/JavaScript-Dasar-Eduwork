@@ -19,9 +19,10 @@ const ekspresi = function () {
 //* - jika parameter lebih dari 1, wajib dibungkus kurung ()
 //* - jika tidak ada paramter, tetap wajib menggunakan kurung ()
 //* - konsep this akan berbeda ketika kita menggunakan arrow function
+
 const panah1 = (a, b) => {
-  document.write("arrow function: ");
-  document.write(`${a} * ${b} = ${a * b}`);
+  console.log("arrow function:");
+  console.log(`${a} * ${b} = ${a * b}`);
   return a * b;
 };
 

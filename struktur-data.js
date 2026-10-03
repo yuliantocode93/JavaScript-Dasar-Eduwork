@@ -3,20 +3,25 @@
 //* Variabel
 
 let names = "Rizki"; //string
-let age = 20; //number
+let age = 20; //number integer bilangan bulat
 let high = 170.5; // floating
 let isMarried = false; //boolean
 let hobbies = ["coding", "reading"]; //array
-let person = { name: "Rizki", age: 20 }; //objects
+let person = {
+  name: "Rizki",
+  age: 20,
+}; //object
 
-names = "eko";
-console.log(`hello ${names}, your age is ${age} and you are ${isMarried ? "married" : "single"} and your hobbies are ${hobbies} and your person is ${person}`);
+// names = "eko";
+console.log(
+  `hello ${names}, your age is ${age} and you are ${isMarried ? "married" : "single"} and your hobbies are ${hobbies} and your person is ${person}`,
+);
 
 //* Object Data Type
 let person1 = {
   name: "eko",
   age: 20,
-  hobbies: ["coding", "reading"],
+  hobbies: ["coding", "reading", "gaming"],
   sayhello: function () {
     console.log(`hello ${this.name}`); //* eko
     console.log(this); //* { name: 'eko', age: 20, hobbies: [ 'coding', 'reading' ] }
@@ -33,8 +38,8 @@ console.log(angka ** 2); // kuadrat = 100
 console.log(angka % 4); // modulus sisa bagi = 2
 console.log(angka / 4); // pembagian = 2.5
 console.log(angka); // 10
-console.log(++angka); // 11
-console.log(--angka); // 10
+console.log(++angka); // 11 increment
+console.log(--angka); // 10 decrement
 
 //* Operator Perbandingan
 

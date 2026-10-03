@@ -1,6 +1,6 @@
 // * Control Flow
 
-//* Contoh 0: If-else
+//* Contoh 0: If-else // Conditional Statements (Percabangan)
 
 let nilai = 80; // Nilai yang akan diperiksa
 
@@ -163,7 +163,7 @@ let kkDua = kkSatu.filter(function (kk) {
 
 let kkTiga = kkDua.reduce(function (prev, curr) {
   return prev + curr.pendapatan;
-}, 0); //* 5000000
+}, 0); //* 0
 
 let kk3 = keluarga.find(function (kk) {
   return kk.age > 20;

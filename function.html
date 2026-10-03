@@ -70,6 +70,14 @@
 
       document.getElementById("coba2").onclick = () => {
         kali(5, 6);
+
+        const panah1 = (a, b) => {
+          document.write("arrow function: ");
+          document.write(`${a} * ${b} = ${a * b}`);
+          return a * b;
+        };
+
+        panah1(50000, 100000);
       };
     </script>
     <script src="function.js"></script>
