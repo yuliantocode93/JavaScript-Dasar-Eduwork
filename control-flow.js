@@ -2,8 +2,7 @@
 
 //* Contoh 0: If-else
 
-let nilai = 60;
-let gender = "pria";
+let nilai = 80; // Nilai yang akan diperiksa
 
 if (nilai > 80) {
   console.log("Nilai anda A");
@@ -17,9 +16,69 @@ if (nilai > 80) {
   console.log("Nilai anda E");
 }
 
+// //* Contoh 1: Switch-Case
+// switch (true) {
+//   case nilai > 80:
+//     console.log("Nilai anda A");
+//     break;
+//   case nilai > 70:
+//     console.log("Nilai anda B");
+//     break;
+//   case nilai > 60:
+//     console.log("Nilai anda C");
+//     break;
+//   case nilai > 50:
+//     console.log("Nilai anda D");
+//     break;
+//   default:
+//     console.log("Nilai anda E");
+//     break;
+// }
+
+// //* Contoh 2: While Loop
+// let i = 1;
+// while (i <= 5) {
+//   console.log(`loop while ke- ${i}`); // 1, 2, 3, 4, 5
+//   i++;
+// }
+
+// //* Contoh 3: Do-While Loop
+// let j = 1;
+// do {
+//   console.log(`loop do-while ke- ${j}`); // 1, 2, 3, 4, 5
+//   j++;
+// } while (j <= 5);
+
+// //* Contoh 4: For Loop
+// for (let k = 1; k <= 5; k++) {
+//   console.log(`loop for ke- ${k}`); // 1, 2, 3, 4, 5
+// }
+
+// //* Contoh 5: For-Of Loop
+// const buah = ["apel", "pisang", "jeruk", "anggur"];
+// for (let buah of buah) {
+//   console.log(buah); // apel, pisang, jeruk, anggur
+// }
+
+// //* Contoh 6: For-In Loop
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York",
+// };
+// for (let key in person) {
+//   console.log(`${key}: ${person[key]}`); // name: John, age: 30, city: New York
+// }
+
+// //* Contoh 7: For-Each Loop
+// const numbers = [1, 2, 3, 4, 5];
+// numbers.forEach(function (number) {
+//   console.log(number); // 1, 2, 3, 4, 5
+// });
+
 //* Contoh 1: Loop dari 1 hingga 5
-for (let i = 1; i <= 5; i++) {
-  console.log(i); // 1, 2, 3, 4, 5
+for (let i = 1; i <= 7; i++) {
+  console.log(`loop for of ke- ${i}`); // 1, 2, 3, 4, 5, 6, 7
 }
 
 //* Contoh 2: Loop melalui elemen-elemen dalam sebuah array
@@ -28,7 +87,7 @@ for (let i = 0; i < fruits.length; i++) {
   console.log(fruits[i]); // apel, pisang, jeruk, anggur
 }
 
-// Contoh 3: Loop melalui properti-properti dalam sebuah objek
+//* Contoh 3: Loop melalui properti-properti dalam sebuah objek
 const person = {
   name: "John",
   age: 30,
@@ -39,19 +98,24 @@ for (let key in person) {
   console.log(`${key}: ${person[key]}`); // name: John, age: 30, city: New York
 }
 
-// Contoh 4: Loop melalui properti-properti dalam sebuah array
+//* Contoh 4: Loop melalui properti-properti dalam sebuah array
 const numbers = [1, 2, 3, 4, 5];
 for (let num of numbers) {
   console.log(num); // 1, 2, 3, 4, 5
 }
 
-// Contoh 5: Loop melalui elemen-elemen dalam sebuah array
+//* Element untuk HTML
+//* Contoh 5: Loop melalui elemen-elemen dalam sebuah array
 let buah = document.querySelectorAll(".buah");
 for (let e of buah) {
   e.addEventListener("click", function () {
+    this.style.textDecoration = "underline";
     this.style.color = "red";
+    alert(this.textContent);
   });
 }
+
+//* ----------------------------------------------------------------------------------------------//
 
 let keluarga = [
   {
@@ -78,9 +142,28 @@ let kk1 = keluarga.map(function (kk) {
   return kk;
 }); //* [ { name: 'eko', age: 20 }, { name: 'budi', age: 21 }, { name: 'wati', age: 22 } ]
 
+let kkSatu = keluarga.map(function (kk) {
+  return {
+    name: kk.name.toUpperCase(),
+    status: kk.status,
+    pendapatan: kk.pendapatan,
+    age: kk.age,
+  };
+}); //* [ { name: 'EKO', age: 20 }, { name: 'BUDI', age: 21 }, { name: 'WATI', age: 22 } ]
+
 let kk2 = keluarga.filter(function (kk) {
   return kk.age > 20;
 }); //* [ { name: 'budi', age: 21 }, { name: 'wati', age: 22 } ]
+
+let kkDua = kkSatu.filter(function (kk) {
+  if (kk.status === "pelajar keren") {
+    return kk;
+  }
+});
+
+let kkTiga = kkDua.reduce(function (prev, curr) {
+  return prev + curr.pendapatan;
+}, 0); //* 5000000
 
 let kk3 = keluarga.find(function (kk) {
   return kk.age > 20;
@@ -102,14 +185,15 @@ let kk7 = keluarga.reduce(function (total, kk) {
   return total + kk.age;
 }, 0); //* 63
 
-console.log("kk1 sampai kk7 = ");
-console.log(kk1);
-console.log(kk2);
-console.log(kk3);
-console.log(kk4);
-console.log(kk5);
-console.log(kk6);
-console.log(kk7);
+console.log("kk1 sampai kk7 = "); // * [ { name: 'eko', age: 20 }, { name: 'budi', age: 21 }, { name: 'wati', age: 22 } ]
+console.log(kkSatu); // * [ { name: 'EKO', age: 20 }, { name: 'BUDI', age: 21 }, { name: 'WATI', age: 22 } ]
+console.log(kk1); // * [ { name: 'eko', age: 20 }, { name: 'budi', age: 21 }, { name: 'wati', age: 22 } ]
+console.log(kk2); // * [ { name: 'budi', age: 21 }, { name: 'wati', age: 22 } ]
+console.log(kk3); // * { name: 'budi', age: 21 }
+console.log(kk4); // * 1
+console.log(kk5); // * true
+console.log(kk6); // * true
+console.log(kk7); // * 63
 
 let kk8 = keluarga.map(function (kk) {
   return {

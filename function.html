@@ -1,67 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
+  <head>
     <title>Function</title>
     <meta charset="UTF-8" />
     <!-- Sertakan link ke styles.css di sini jika diperlukan -->
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app"></div>
     <div id="app2"></div>
+    <div id="app3"></div>
     <div id="btn"></div>
 
     <script>
-        document.getElementById("app").innerHTML = `
-        <h1>Hello Vanilla!</h1>
-        <button id="coba">click me :) </button>
+      document.getElementById("app").innerHTML = `
+      <h1>Hello Vanilla!</h1>
+      <button id="coba">click me :) </button>
+      `;
+
+      document.getElementById("app2").innerHTML = `
+      <h1>Hello Vanilla!</h1>
+      <button id="coba2">click me :) </button>
+      `;
+
+      document.getElementById("app3").innerHTML = `
+      <h1>Hello Vanilla!</h1>
+      <button id="coba3">click me :) </button>
         `;
 
-        document.getElementById("app2").innerHTML = `
-        <h1>Hello Vanilla!</h1>
-        <button id="coba2">click me :) </button>
-        `;
+      /*
+       *--------------------------------------------------
+       * PARAMETER
+       *--------------------------------------------------
+       */
+      // parameter di fungsi deklarasi
+      function tambah(a, b) {
+        alert(`${a} + ${b} = ${a + b}`);
+      }
 
+      function bagi(a, b) {
+        alert(`${a} / ${b} = ${a / b}`);
+      }
 
-        /*
-         *--------------------------------------------------
-         * PARAMETER
-         *--------------------------------------------------
-         */
-        // parameter di fungsi deklarasi
-        function tambah(a, b) {
-            alert(`${a} + ${b} = ${a + b}`);
-        }
+      // 2. function expression
+      const kali = function (a, b) {
+        alert(`${a} * ${b} = ${a * b}`);
+      };
 
-        // 2. function expression
-        const kali = function (a, b) {
-            alert(`${a} * ${b} = ${a * b}`);
-        };
+      // 3. arrow function
+      // - jika hanya 1 parameter, tidak wajib dibungkus kurung ()
+      // - jika parameter lebih dari 1, wajib dibungkus kurung ()
+      // - jika tidak ada paramter, tetap wajib menggunakan kurung ()
+      // - konsep this akan berbeda ketika kita menggunakan arrow function
+      // const panah = () => {
+      //   alert(`nilai adalah ${a}`);
+      // };
 
-        // 3. arrow function
-        // - jika hanya 1 parameter, tidak wajib dibungkus kurung ()
-        // - jika parameter lebih dari 1, wajib dibungkus kurung ()
-        // - jika tidak ada paramter, tetap wajib menggunakan kurung ()
-        // - konsep this akan berbeda ketika kita menggunakan arrow function
-        // const panah = () => {
-        //   alert(`nilai adalah ${a}`);
-        // };
+      const arrow = () => ({ name: "abdul rahman" });
 
-        const arrow = () => ({ name: "abdul rahman" });
+      let tes = arrow();
 
-        let tes = arrow();
+      document.getElementById("coba").onclick = () => {
+        tambah(5, 6);
+      };
 
-        document.getElementById("coba").onclick = () => {
-            tambah(5, 6);
-        };
+      document.getElementById("coba3").onclick = () => {
+        bagi(5, 6);
+      };
 
-        document.getElementById("coba2").onclick = () => {
-            kali(5, 6);
-        };
-
+      document.getElementById("coba2").onclick = () => {
+        kali(5, 6);
+      };
     </script>
     <script src="function.js"></script>
-</body>
-
+  </body>
 </html>

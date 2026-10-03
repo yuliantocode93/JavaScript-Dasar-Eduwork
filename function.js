@@ -6,13 +6,13 @@ const anonymous = function (a, b) {
 //* 1. function declaration
 function deklarasi() {
   console.log("declaration");
-}
+} // function declaration adalah function yang dideklarasikan dengan nama, dan bisa dipanggil sebelum deklarasi
 
 //* 2. function expression
 const ekspresi = function () {
   // anonymous function
   console.log("expression");
-};
+}; // function expression adalah function yang dideklarasikan dalam variabel
 
 //* 3. arrow function
 //* - jika hanya 1 parameter, tidak wajib dibungkus kurung ()
@@ -21,11 +21,11 @@ const ekspresi = function () {
 //* - konsep this akan berbeda ketika kita menggunakan arrow function
 const panah1 = (a, b) => {
   document.write("arrow function: ");
-  document.write(`${a} + ${b} = ${a + b}`);
-  return a + b;
+  document.write(`${a} * ${b} = ${a * b}`);
+  return a * b;
 };
 
-panah1(1, 2);
+panah1(50000, 100000);
 
 const panah = () => {
   console.log("arrow");
@@ -43,5 +43,5 @@ document.getElementById("btn").innerHTML = `
 
 const btn = document.getElementById("btn");
 btn.addEventListener("click", () => {
-  console.log(this); // window object bawaan browser
+  alert.call(this, "Rp. 50.000 * 100.000 = Rp. 5.000.000.000"); // this akan mengacu pada window
 });

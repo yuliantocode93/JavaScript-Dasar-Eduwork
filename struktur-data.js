@@ -18,8 +18,8 @@ let person1 = {
   age: 20,
   hobbies: ["coding", "reading"],
   sayhello: function () {
-    console.log(`hello ${this.name}`); // this
-    console.log(this); // this
+    console.log(`hello ${this.name}`); //* eko
+    console.log(this); //* { name: 'eko', age: 20, hobbies: [ 'coding', 'reading' ] }
   },
 };
 
